@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="image">
+<div>
+<ul class="navbar">
+  <li ><a class="button" href="{% url 'home' %} ">Home</a></li>
+  <li ><a class="button " href="{% url 'about' %}">About</a></li>
+  <li><a class="button  " href="{% url 'contact' %}">Contact</a></li>
+  <li><a class="button " href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span>&nbsp Log Out</a></li>
+</ul>
+</div>
+<div class="active-head">
+<p>Welcome&nbsp{{name}}<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspto <br>&nbsp&nbspHealth&nbspAnalysis</p>
+</div>
+</div>
+<div>
+<h3 style="color:#0072A0;text-align:center;font-weight:bold;">We Care for Your Health</h3>
+<hr class="hr-line">
+<div class="jumbotron">
+<div class="container">
+
+
+<div class="row card-deck"> 
+
+<div class="col-sm-6">
+
+<div class="card" style="width:400px">
+    <img class="card-img-top" src="{% static 'images17.jpg' %}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Diabetes</h4>
+      <p class="card-text">A group of diseases that result in too much sugar in blood.</p>
+      <a href="{% url 'diabetes' %}" class="btn btn-primary">Check your health</a>
+    </div>
+  </div>
+ 
+  
+  </div>
+  
+  
+  <div class="col-sm-6">
+
+<div class="card" style="width:400px">
+    <img class="card-img-top" src="{% static 'images15.jpg' %}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Cardiovascular</h4>
+      <p class="card-text">Heart condition that include diseased vessels and blood clots.</p>
+      <a href="{% url 'heart' %}" class="btn btn-primary">Check your health</a>
+    </div>
+  </div>
+ 
+  
+  </div>
+  </div>
+  <div class="row card-deck">
+
+  
+  <div class="col-sm-6">
+
+<div class="card" style="width:400px">
+    <img class="card-img-top" src="{% static 'images23.png' %}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Breast Cancer</h4>
+      <p class="card-text">A cancer that forms in cell of breasts.Mostly occurs in women.</p>
+      <a href="{% url 'breast' %}" class="btn btn-primary">Check your health</a>
+    </div>
+  </div>
+ 
+  
+  </div>
+  
+  
+  
+  <div class="col-sm-6">
+
+<div class="card" style="width:400px">
+    <img class="card-img-top" src="{% static 'mental-health.jpg' %}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Mental Health</h4>
+      <p class="card-text">A wide range of condition that affects mood,thinking and behaviour.</p>
+      <a href="{% url 'mental' %}" class="btn btn-primary">Check your health</a>
+    </div>
+  </div>
+ 
+  
+  </div>
+	
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+<html>

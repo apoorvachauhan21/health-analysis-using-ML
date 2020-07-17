@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+ <style>
+ input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ input[type=number] {
+  -moz-appearance: textfield;
+}
+ </style>
+</head>
+<body>
+<div class="diabetes-image">
+					
+<div class=" container">
+<div class="form1">
+<h1 class="font-weight-bolder">ENTER YOUR DETAILS</h1><hr style="color: #a9a9a9;
+      opacity: 0.3;">
+<form class="form-horizontal  " action="diabetescheck" method="post">
+    {% csrf_token %}
+<div class="form-group">
+      
+        
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="pregnancy" placeholder="Enter pregnancy" step=0.1 required/>
+      </div>
+</div>
+
+<div class="form-group">
+    
+        
+    <div class="col-sm-11">
+        <input type="number" class="form-control" name="glucose" placeholder="Enter Glucose" step=0.1 required/>
+      </div>
+</div>
+
+<div class="form-group">
+
+       
+    <div class="col-sm-11">
+        <input type="number" class="form-control" name="bp" placeholder="Enter Blood pressure" step=0.1 required/>
+      </div>
+</div>
+
+<div class="form-group">
+      
+        
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="skin" placeholder="Enter Skin Thickness" step=0.1 required/>
+      </div>
+</div>
+
+
+<div class="form-group">
+    
+        
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="insulin" placeholder="Enter Insulin" step=0.1 required/>
+      </div>
+</div>
+
+
+<div class="form-group">
+     
+     
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="bmi" placeholder="Enter BMI" step=0.1 required/>
+      </div>
+</div>
+
+
+<div class="form-group">
+     
+        
+     <div class="col-sm-11">
+        <input type="number" class="form-control" name="dpf" placeholder="Enter DiabetesPedigreeFunction" step=0.00001 required/>
+      </div>
+</div>
+
+
+<div class="form-group">
+      
+        
+     <div class="col-sm-11">
+        <input type="number" class="form-control" name="age" placeholder="Enter Age" min="0" step="1" required/>
+      </div>
+</div>
+
+
+<div class="form-group">
+    
+    <div class=" col-sm-11">
+        <button type="submit" class="btn btn-primary active">Check report</button></div><div class=" col-sm-11"><p style="padding-top:7px;"><b>{% for message in messages%}{{message}}{% endfor %}</b></p></div>
+</div>
+    <br>
+    <br>
+<span id="result"></span>
+
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

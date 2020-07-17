@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+ <style>
+ input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ input[type=number] {
+  -moz-appearance: textfield;
+}
+ </style>
+ 
+</head>
+<body>
+<div class="heart-image">
+					
+<div class=" container">
+<div class="form1">
+<h1 class="font-weight-bolder">ENTER YOUR DETAILS</h1><hr style="color: #a9a9a9;
+      opacity: 0.3;">
+<form class="form-horizontal" name="myForm"  action="heartcheck" method="post">
+    {% csrf_token %}
+<div class="form-group">
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="age" placeholder="Enter Age" min="0" step=1 required/>
+      </div>
+</div>
+
+<div class="form-group">
+    
+     <div class="col-sm-11">
+     <select class="form-control" name="gender">
+		<option selected disabled>Gender</option>
+		<option value="1">Male</option>
+		<option value="0">Female</option>
+
+	</select>
+  
+  </div>
+    
+</div>
+
+<div class="form-group">
+
+       
+    <div class="col-sm-11">
+     <select class="form-control" name="angina">
+		<option selected disabled>Angina</option>
+		<option value="1">Typical angina</option>
+		<option  value="2">Atypical angina</option>
+		<option  value="3">Non-anginal pain</option>
+		<option  value="4">Asymptomatic</option>
+
+	</select>
+  
+  </div>
+</div>
+
+<div class="form-group">
+      
+        
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="bp" placeholder="Enter Blood Pressure" step=0.1 required/>
+      </div>
+</div>
+
+
+<div class="form-group">
+    
+        
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="cholestoral" placeholder="Enter Cholestoral" step=0.1 required/>
+      </div>
+</div>
+
+<div class="form-group">
+    
+     <div class="col-sm-11">
+     <select class="form-control" name="fbs">
+		<option selected disabled>Fasting Blood Sugar</option>
+		<option value="1">  > 120 mg/dl</option>
+		<option  value="0">  < 120 mg/dl </option>
+
+	</select>
+  
+  </div>
+    
+</div>
+
+
+<div class="form-group">
+     <div class="col-sm-11">
+     <select class="form-control" name="electrocardiographic">
+		<option selected disabled>Resting electrocardiographic</option>
+		<option  value="0">Normal</option>
+		<option  value="1">Having ST-T wave abnormality</option>
+		<option  value="2">Definite left ventricular hypertrophy</option>
+	</select>
+  
+  </div>
+     
+      
+</div>
+
+<div class="form-group">
+    
+        
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="maxhr" placeholder="Enter Maximum Heart rate achieved" step=0.1 required/>
+      </div>
+</div>
+
+
+<div class="form-group">
+     
+        
+     <div class="col-sm-11">
+     <select class="form-control" name="iangina">
+		<option selected disabled>Exercise induced angina</option>
+		<option  value="1">Yes</option>
+		<option value="0">No</option>
+	</select>
+  
+  </div>
+</div>
+
+
+<div class="form-group">
+      
+        
+     <div class="col-sm-11">
+        <input type="number" class="form-control" name="depression" placeholder="Enter ST depression inducded" step=0.1 required/>
+      </div>
+</div>
+
+<div class="form-group">
+      
+        
+     <div class="col-sm-11">
+     <select class="form-control" name="slope">
+		<option selected disabled>Slope of the peak exercise</option>
+		<option  value="1">Upsloping Slope</option>
+		<option  value="2">Flat Slope</option>
+		<option  value="3">Downsloping Slope</option>
+	</select>
+  
+  </div>
+</div>
+
+<div class="form-group">
+      
+        
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="majorves" placeholder="Enter number of major vessels" min="0" max="3" required/>
+      </div>
+</div>
+
+<div class="form-group">
+      
+      <div class="col-sm-11">
+     <select class="form-control" name="thal">
+		<option selected disabled>Thalassemia</option>
+		<option  value="1">Normal</option>
+		<option  value="2">Fixed defect</option>
+		<option  value="3">Reversable defect</option>
+	</select>
+  
+  </div>
+</div>
+
+
+
+
+<div class="form-group">
+    
+    <div class=" col-sm-11">
+<button type="submit" class="btn btn-primary active">Check report</button>
+</div>
+    <div style="margin-top:7px;">{% for message in messages%}
+        <p><b>{{message}}</b></p>
+        {% endfor %}</div>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+</body>
+</html>

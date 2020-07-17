@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+ <style>
+ input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ input[type=number] {
+  -moz-appearance: textfield;
+}
+ </style>
+</head>
+<body>
+<div class="mental-image">
+					
+<div class=" container">
+<div class="form1">
+<h1 class="font-weight-bolder">ENTER YOUR DETAILS</h1>
+<form class="form-horizontal" name="myForm"  action="mentalcheck" method="post">
+    {% csrf_token %}
+<div class="form-group">
+      <div class="col-sm-11">
+        <input type="number" class="form-control" name="age" placeholder="Enter Age" min="0" step=1 required/>
+      </div>
+</div>
+
+<div class="form-group">
+    
+     <div class="col-sm-11">
+     <select class="form-control" name="gender">
+		<option selected disabled>Gender</option>
+		<option value="1">Male</option>
+		<option value="0">Female</option>
+		<option value="2">Transgender</option>
+
+	</select>
+  
+  </div>
+    
+</div>
+
+<div class="form-group">
+
+       
+    <div class="col-sm-11">
+     <select class="form-control" name="family">
+		<option selected disabled>Family History</option>
+		<option  value="1">Yes</option>
+		<option  value="0">No</option>
+
+	</select>
+  
+  </div>
+</div>
+
+<div class="form-group">
+      
+        
+      <div class="col-sm-11">
+     <select class="form-control" name="benefits">
+		<option selected disabled>Benefits</option>
+		<option value="2">Yes</option>
+		<option value="1">No</option>
+		<option value="0">Don't know</option>
+
+	</select>
+  
+  </div>
+</div>
+
+
+<div class="form-group">
+    
+        
+      <div class="col-sm-11">
+     <select class="form-control" name="care">
+		<option selected disabled>Care</option>
+		<option value="2">Yes</option>
+		<option  value="0">No</option>
+		<option  value="1">Not sure</option>
+
+	</select>
+  
+  </div>
+</div>
+
+<div class="form-group">
+    
+     <div class="col-sm-11">
+     <select class="form-control" name="anonymity">
+		<option selected disabled>Anonymity</option>
+		<option  value="2">Yes</option>
+		<option  value="1">No</option>
+		<option  value="0">Don't know</option>
+		
+
+	</select>
+  
+  </div>
+    
+</div>
+
+
+<div class="form-group">
+     <div class="col-sm-11">
+     <select class="form-control" name="leave">
+		<option selected disabled>Leave</option>
+		<option  value="0">Don't know</option>
+		<option  value="1">Somewhat difficult</option>
+		<option  value="2">Somewhat Easy</option>
+		<option  value="3">Very Difficult</option>
+		<option value="4">Very Easy</option>
+		
+	</select>
+  
+  </div>
+     
+      
+</div>
+
+<div class="form-group">
+    
+        
+      <div class="col-sm-11">
+     <select class="form-control" name="work">
+		<option selected disabled>Work Interface</option>
+		<option  value="0">Don't know</option>
+		<option  value="1">Never</option>
+		<option  value="2">Often</option>
+		<option  value="3">Rarely</option>
+		<option  value="4">Sometimes</option>
+		
+	</select>
+  
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+    
+    <div class=" col-sm-11">
+<button type="submit" class="btn btn-primary active">Check report</button>
+</div>
+    <div style="margin-top:7px;">{% for message in messages%}
+        <p><b>{{message}}</b></p>
+        {% endfor %}</div>
+</div>
+</form>
+
+</div>
+</div>
+</div>
+</body>
+</html>

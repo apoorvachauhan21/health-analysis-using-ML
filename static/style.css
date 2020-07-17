@@ -1,0 +1,59 @@
+.image{
+	background-image: url("images9.jpg");max-width:100%;height:700px; background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;}
+.navbar{
+  list-style-type: none;margin: 0;padding-left:30px;overflow: hidden;background-color:transparent;}
+li {
+  float:left;}
+  
+  li.active {
+  background-color:#0072A0;}
+
+.button{
+  display:block;color:black;text-align: center;padding: 20px 132px;text-decoration: none;font-weight:bold;font-size:15px;}
+
+  .active-head{
+ padding:230px;font-size:55px;font-weight:bold;margin-left:500px}
+
+.hr-line{border-top:3px solid #0072A0;width:5%;}
+
+.card-deck{
+	margin-bottom:20px;margin-left:90px;
+}
+
+.contact-image{
+	background-image: url("images23.jpg");max-width:100%;height:700px; background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;}
+
+	.about-image{
+	background-image: url("images24.jpg");max-width:100%;height:700px; background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;}
+
+	
+.diabetes-image{
+	background-image: url("images25.jpg");max-width:100%;height:650px; background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;}
+	
+	
+.heart-image{
+	background-image: url("images25.jpg");max-width:100%;height:900px; background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;}
+	
+	
+.breast-image{
+	background-image: url("images25.jpg");max-width:100%;height:900px; background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;}
+	
+.mental-image{
+	background-image: url("images25.jpg");max-width:100%;height:650px; background-position: center;background-repeat: no-repeat;background-size: cover;position: relative;}
+	
+	
+	.contact-style{
+	margin-top:200px;font-size:30px;font-weight:bold;margin-left:850px}
+	
+	.contact-style1{
+	margin-top:30px;font-size:30px;font-weight:bold;margin-left:850px}
+	
+.about-head{
+	 margin-top:210px;font-weight:bold;margin-left:80px;color:black;
+}
+
+.form1{
+      width:600px;margin:20px;padding:10px 0 10px 30px;background: #ebebeb;border:0 10px;
+      }
+
+      

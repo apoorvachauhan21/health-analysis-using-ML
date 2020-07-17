@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="contact-image">
+<div>
+<ul class="navbar">
+  <li ><a class="button" href="{% url 'home' %}">Home</a></li>
+  <li ><a class="button " href="{% url 'about' %}">About</a></li>
+  <li><a class="button  " href="{% url 'contact' %}">Contact</a></li>
+  <li><a class="button " href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span>&nbsp Log Out</a></li>
+</ul>
+<div class="contact-style col-sm-3"><h3 style="color:black;">Contact Us:</h3>
+	<p style="padding-left:0.5cm;" class="fa">+917376944201, +917905417854</p>
+	<h3 style="color:black;">Email at:</h3>
+	<p style="padding-left:0.5cm;" class="fa">myhealth@gmail.com</p>
+	
+	</div>
+<div class="contact-style1 col-sm-3"><h3 style="color:black;">Follow Us:</h3>
+	<i style="font-size:24px;padding-left:0.5cm;" class="fa fa-instagram"></i>
+	<i style="font-size:24px;padding-left:0.5cm;" class="fa fa-facebook"></i>
+	<i style="font-size:24px;padding-left:0.5cm;" class="fa fa-twitter"></i>
+	<i style="font-size:24px;padding-left:0.5cm;" class="fa fa-linkedin"></i>
+	</div>
+</div>
+    </div>
+</body>
+</html>
